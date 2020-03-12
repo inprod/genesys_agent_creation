@@ -1,0 +1,88 @@
+<html>
+
+<head>
+  <title>InProd</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link rel="icon" href="./images/tab-icon-76x76.png">
+  <script src="./scripts/index.js"></script>
+</head>
+
+<body>
+  <div class="container mt-3 col-md-7 col-xl-5">
+    <div class="row">
+      <img class="mx-auto" src="./images/inprod_logo.png" />
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <p>
+          This page demonstrates the ability to create simple web pages that
+          expose InProd Changeset to end users. The use case is to enable staff
+          to perform complicated and highly repeatable changes without needing
+          to have the technical domain knowledge.
+        </p>
+        <br/>
+        <!-- Alert for showing success/wraning/error status -->
+        <div id="alert-dialog" class="alert alert-dismissible collapse" role="alert">
+          <span id="alert-message"></span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Form for sending data on server -->
+        <form id="form">
+          <div class="form-group">
+            <label for="username-input">Inprod Username</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="Username to log into your InProd account."><i class="fas fa-info-circle"></i></a>
+            <input type="text" class="form-control" id="username-input" placeholder="Inprod Username" required>
+          </div>
+          <div class="form-group">
+            <label for="password-input">Inprod Password</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="Password to log into your InProd account."><i class="fas fa-info-circle"></i></a>
+            <input type="password" class="form-control" id="password-input" placeholder="Inprod Password" required>
+          </div>
+          <div class="form-group">
+            <label for="first-name-input">Agent First Name</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="First name of agent to be added."><i class="fas fa-info-circle"></i></a>
+            <input type="text" class="form-control" id="first-name-input" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name-input">Agent Last Name</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="Last name of agent to be added."><i class="fas fa-info-circle"></i></a>
+            <input type="text" class="form-control" id="last-name-input" placeholder="Last name" required>
+          </div>
+          <div class="form-group">
+            <label for="employee-input">Employee account</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="Active Directory Username"><i class="fas fa-info-circle"></i></a>
+            <input type="text" class="form-control" id="employee-input" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="team-input">Team</label>
+            <a tabindex="-1" style="color: inherit;" role="button" data-toggle="popover" data-trigger="focus"
+              data-content="Team"><i class="fas fa-info-circle"></i></a>
+            <select class="form-control" id="team-input" required>
+              <option>inbound_sales</option>
+              <option>outbound_sales</option>
+              <option>support</option>
+            </select>
+          </div>
+          <button id="submit-button" type="submit" class="btn btn-primary">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </body>
+
+</html>
