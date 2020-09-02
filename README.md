@@ -20,6 +20,18 @@ Learn more at https://www.inprod.io
 These instructions will get you a copy of the project up and running on your
 local machine for development and testing purposes.
 
+# Docker installation
+
+Build the docoker image with
+* `docker build -t genesys_agent_creation .`
+Start up the container with 
+* `docker run -p 8080:8080 genesys_agent_creation`
+
+You should be able to connect via http://localhost:8080
+
+
+# Traditional installation
+
 ## Prerequisites
 Node.js (v8.12.0)
 Node Package Manager (v6.4.1)
